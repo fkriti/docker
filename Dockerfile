@@ -1,7 +1,5 @@
 FROM python:3.7
 
-WORKDIR /home/kriti/Documents/project-3
-
 RUN pip install torchvision
 
 RUN pip install flask
