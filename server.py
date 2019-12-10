@@ -41,8 +41,9 @@ def predict():
         except: urllib.request.urlretrieve(url, filename)
         img_bytes = open(filename,'rb').read()
         class_id, class_name = get_prediction(image_bytes=img_bytes)
+        print(class_name)
         return class_name
 
 
 if __name__ == '__main__':
-    server.run()
+    server.run(host='0.0.0.0')
